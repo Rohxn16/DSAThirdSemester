@@ -21,8 +21,6 @@ Size of the stack at the end of all operations will be **3**
 
 *The **top** or **peek** function allows us to see the topmost or last inserted element of the stack*
 
-
-
 ## Implementation of Stack:
 
 The Code for Implementation of Stack in C can be found here:
