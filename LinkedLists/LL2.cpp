@@ -44,6 +44,53 @@ public:
         }
     }
 
+    void addToTail(Node** head, int data){
+        
+        Node* newNode = new Node(data);
+        
+        if(*head == nullptr) {
+            *head = newNode;
+        }
+        else{
+            Node* temp = *head;
+            while(temp->next!=nullptr){
+                temp = temp->next;
+            }
+            temp->next = newNode;
+        }
+    }
+
+    void removeTail(Node **head){
+        if(*head == nullptr) cout <<"The list is empty\n";
+        else{
+            Node* temp = *head;
+            while(temp->next != nullptr){
+                temp = temp->next;
+            }
+            temp->next = temp->next->next;
+        }
+    }
+
+    void insertAtIndex(Node** head, int data, int index){
+        Node* itr = *head;
+        for(int i = 1; i < index; i++){
+            itr = itr->next;
+        }
+        Node* temp = itr->next;
+        Node* newNode = new Node(data);
+        newNode->next = temp;
+        itr->next = newNode;
+    }
+
+    void deleteIndex(Node** head, int index){
+        Node* itr = *head;
+        for(int i = 1; i < index; i++){
+            itr = itr->next;
+        }
+        itr->next = itr->next->next;
+    }
+
+
 int main(){
     Node* head = new Node(15);
     Node* second = new Node(12);
