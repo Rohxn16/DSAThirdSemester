@@ -5,7 +5,9 @@ struct Node{
     int data;
     struct Node *next;
     struct Node *prev;
-} Node;
+};
+
+// struct Node* head;
 
 void insertAtHead(struct Node** head, int val){
     struct Node* temp = (struct Node*)malloc(sizeof(struct Node));
@@ -96,62 +98,65 @@ void traverseFromTail(struct Node* tail){
 int main() {
     struct Node* head = NULL;
     struct Node* tail = head;
-    int choice, val, index;
+    // int choice, val, index;
 
-    while (1) {
-        printf("1. Insert at head\n");
-        printf("2. Insert at tail\n");
-        printf("3. Insert at index\n");
-        printf("4. Delete at head\n");
-        printf("5. Delete at tail\n");
-        printf("6. Delete at index\n");
-        printf("7. Traverse from head\n");
-        printf("8. Traverse from tail\n");
-        printf("9. Exit\n");
-        printf("Enter your choice: ");
-        scanf("%d", &choice);
+    // print size of the node
+    printf("Size of the node: %ld\n", sizeof(struct Node));
 
-        switch (choice) {
-            case 1:
-                printf("Enter the value to insert: ");
-                scanf("%d", &val);
-                insertAtHead(&head, val);
-                break;
-            case 2:
-                printf("Enter the value to insert: ");
-                scanf("%d", &val);
-                insertAtTail(&tail, val);
-                break;
-            case 3:
-                printf("Enter the value to insert: ");
-                scanf("%d", &val);
-                printf("Enter the index: ");
-                scanf("%d", &index);
-                insertAtIndex(&head, val, index);
-                break;
-            case 4:
-                deleteAtHead(&head);
-                break;
-            case 5:
-                deleteAtTail(&tail);
-                break;
-            case 6:
-                printf("Enter the index: ");
-                scanf("%d", &index);
-                deleteAtIndex(&head, index);
-                break;
-            case 7:
-                traverseFromHead(head);
-                break;
-            case 8:
-                traverseFromTail(tail);
-                break;
-            case 9:
-                exit(0);
-            default:
-                printf("Invalid choice\n");
-        }
-    }
+    // while (1) {
+    //     printf("1. Insert at head\n");
+    //     printf("2. Insert at tail\n");
+    //     printf("3. Insert at index\n");
+    //     printf("4. Delete at head\n");
+    //     printf("5. Delete at tail\n");
+    //     printf("6. Delete at index\n");
+    //     printf("7. Traverse from head\n");
+    //     printf("8. Traverse from tail\n");
+    //     printf("9. Exit\n");
+    //     printf("Enter your choice: ");
+    //     scanf("%d", &choice);
+
+    //     switch (choice) {
+    //         case 1:
+    //             printf("Enter the value to insert: ");
+    //             scanf("%d", &val);
+    //             insertAtHead(&head, val);
+    //             break;
+    //         case 2:
+    //             printf("Enter the value to insert: ");
+    //             scanf("%d", &val);
+    //             insertAtTail(&tail, val);
+    //             break;
+    //         case 3:
+    //             printf("Enter the value to insert: ");
+    //             scanf("%d", &val);
+    //             printf("Enter the index: ");
+    //             scanf("%d", &index);
+    //             insertAtIndex(&head, val, index);
+    //             break;
+    //         case 4:
+    //             deleteAtHead(&head);
+    //             break;
+    //         case 5:
+    //             deleteAtTail(&tail);
+    //             break;
+    //         case 6:
+    //             printf("Enter the index: ");
+    //             scanf("%d", &index);
+    //             deleteAtIndex(&head, index);
+    //             break;
+    //         case 7:
+    //             traverseFromHead(head);
+    //             break;
+    //         case 8:
+    //             traverseFromTail(tail);
+    //             break;
+    //         case 9:
+    //             exit(0);
+    //         default:
+    //             printf("Invalid choice\n");
+    //     }
+    // }
 
     return 0;
 }
