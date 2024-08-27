@@ -1,0 +1,4 @@
+char* x = a;
+char** y = &x;
+char*** f = &y;
+char**** t = &f;
