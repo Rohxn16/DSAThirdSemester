@@ -7,8 +7,8 @@ typedef struct Node{
   struct Node* right;
 }Node;
 
+// In-Order traversal of a binary tree
 void traverseInOrder(Node* root){
-  // in order traversal printing of the tree from the given head address
 
   if(root == NULL) return;
 
@@ -17,6 +17,7 @@ void traverseInOrder(Node* root){
   traverseInOrder(root->right);
 }
 
+// Pre-Order traversal of a binary tree
 void traversePreOrder(Node* root){
   if(root == NULL) return;
 
@@ -25,6 +26,7 @@ void traversePreOrder(Node* root){
   traversePreOrder(root->right);
 }
 
+// Post-Order traversal of binary list
 void traversePostOrder(Node* root){
   if(root == NULL) return;
 
@@ -34,6 +36,13 @@ void traversePostOrder(Node* root){
 
 }
 
+// Level order traversal of trees:
+// BFS: Each layer is printed in this traversal from the left to right
+
+
+
+
+// Creating a new node, reserving memory and assigning a value to the node
 Node* createNewNode(int data){
   Node* node = (Node*)malloc(sizeof(Node)); // reserving space for the new node.
   node->data = data;
@@ -58,4 +67,5 @@ int main(){
   traversePostOrder(root);
   printf("\n");
   return 0;
+
 }
