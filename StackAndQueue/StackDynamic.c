@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
-typedef struct
+typedef struct Stack
 {
     int size;
     int top;
@@ -69,7 +69,7 @@ void printStack(Stack *stack){
 }
 
 
-int main(int argc, char const *argv[])
+int main()
 {
 
     int size;
