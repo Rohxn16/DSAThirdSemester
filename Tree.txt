@@ -1,0 +1,39 @@
+typedef struct tree{
+    int infot;
+    struct tree* left;
+    struct tree* right;
+}bst;
+
+void insert(bst **root, int data){
+    bst* newnode;
+    bst* temp;
+
+    newnode = (bst*)malloc(sizeof(bst));
+    newnode->info = data;
+    newnode->left = newnode->right = NULL;
+
+    if(*root == NULL){
+        *root = newnode;
+        return;
+    }
+    temp = *root;
+
+    while(1){
+        if(data < temp->info){
+            if(temp->left == NULL){
+                temp->left = newnode;
+            }else{
+                temp = temp->left;
+            }
+        }
+
+        if(data > temp->info){
+            if(temp->right == NULL){
+                temp->right = newnide;
+            }else{
+                temp = temp->right;
+            }
+        }
+    }
+    
+}
